@@ -10,7 +10,7 @@ import guru.springmvc.model.ID;
 /**
  * 
  * @author Srisarguru
- *
+ * Using HTTP Codes
  */
 @Controller
 public class ExceptionHandlingController1 {
@@ -20,7 +20,7 @@ public class ExceptionHandlingController1 {
 		ID ids= new ID();
 		
 		if(!ids.Idexists(id)){
-		throw new ExceptionForCont1("someId");
+		throw new ExceptionForCont1("someId"); //uses @ResponseStatus to send back http error code
 		}
 		
 		return "view";
