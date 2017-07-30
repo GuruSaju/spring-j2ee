@@ -7,6 +7,8 @@
 <body bgcolor="green">
 <a href="hello.spring"> Go To Spring Home</a>
 <br>
+<p> For inputs below 1,2 there is no exception. Anything other than that exception is thrown.</p>
+<br>
 <p> Status Code Exception</p>
 
 <form action="statuscodeexception.spring" method="get">
@@ -17,6 +19,14 @@
 <p> Exception Handler Exception</p>
 
 <form action="exceptionhandlerexception.spring" method="get">
+    <input type="text" name="id" >
+    <button type="submit">Submit</button>
+</form>
+
+<p> Exception Handler For Global Exception</p>
+
+
+<form action="exceptionhandlerglobalexception.spring" method="get">
     <input type="text" name="id" >
     <button type="submit">Submit</button>
 </form>

@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * 
  * @author Srisarguru
- * Application specific exception. 
+ *
  */
-@ResponseStatus(value = HttpStatus.CONFLICT, reason = "No such ID") //404
-public class ExceptionForCont1 extends RuntimeException {
-
-	public ExceptionForCont1(String someId){
+@ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "No such ID") //404
+public class ExceptionForGlobal extends RuntimeException {
+	
+	public ExceptionForGlobal(String someId){
 		super (someId + "not found");
 	}
 }
