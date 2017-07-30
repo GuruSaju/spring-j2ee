@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In Servlet 3.x container environment + Spring container will detect and loads the Initializer classes automatically.
