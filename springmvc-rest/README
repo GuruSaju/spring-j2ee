@@ -1,0 +1,12 @@
+
+@ResponseEntity and @ResponseBody for spring rest. 
+
+ResponseEntity is meant to represent the entire HTTP response. You can control anything that goes into it: status code, headers, and body.
+
+@ResponseBody is a marker for the HTTP response body and @ResponseStatus declares the status code of the HTTP response.
+
+@ResponseStatus isn't very flexible. It marks the entire method so you have to be sure that your handler method will always behave the same way. And you still can't set the headers. You'd need the HttpServletResponse or a HttpHeaders parameter.
+
+Basically, ResponseEntity lets you do more.
+
+But in Springbbot(spring 4) we only need @RestController
