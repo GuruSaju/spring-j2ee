@@ -1,0 +1,47 @@
+Step 1) To use the spring security we need to add the dependencies for spring-security-web and spring-security-config in pom.xml
+
+Step 2) Integrate spring security into the application :
+        declare DelegatingFilterProxy as a servlet filter to intercept ant incoming request
+        
+        I added the below in web.xml so that spring security acts as a filter.
+        <listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+		</listener>
+
+        <!-- Loads Spring Security config file -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring-security.xml  (((need to create this Step 3)
+		</param-value>
+	</context-param>
+
+	<!-- Spring Security -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+Step 3) Create spring-security.xml in WEB-INF
+        <intercept-url pattern="/admin.spring" access="ROLE_USER" /> to intercept a particular url pattern and add authentication.
+        
+        This to add users name and password which can pass through security.
+        <authentication-manager>
+	  <authentication-provider>
+	    <user-service>
+		<user name="guru" password="guru" authorities="ROLE_USER" />
+	    </user-service>
+	  </authentication-provider>
+	</authentication-manager>
+	
+	And VOILA!!!! basic spring security!!!!!!!!
+
+That’s all, but wait… where the hell is the login form? the /spring_security_login form maaaaan 
+if you do not define any custom login form, Spring will create a simple login form automatically. DUUHHHH
