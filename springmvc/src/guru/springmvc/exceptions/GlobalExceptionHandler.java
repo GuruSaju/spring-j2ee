@@ -1,4 +1,4 @@
-package guru.springmvc.controller;
+package guru.springmvc.exceptions;
 
 import java.sql.SQLException;
 
@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
-import guru.springmvc.exceptions.ExceptionForGlobal;
 
 /**
  * 
