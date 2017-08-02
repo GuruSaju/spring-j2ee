@@ -1,0 +1,9 @@
+Presenting medium-sized to large data sets in tabular form usually requires a pagination mechanism 
+that enables the client to see some portion of the final result and navigate back and forth through the result set. 
+This is a very common feature in modern web applications
+
+The Spring Framework comes with a bean called org.springframework.beans.support.PagedListHolder,. 
+This class will do all the heavy lifting for the pagination logic implementation. This bean needs to 
+be populated with a List; and setter methods are available to indicate page size and page number. 
+The bean will do the rest. You set it in the controller, which then returns a ModelAndView object to 
+the client layer.
