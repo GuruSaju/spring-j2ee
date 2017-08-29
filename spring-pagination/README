@@ -7,3 +7,7 @@ This class will do all the heavy lifting for the pagination logic implementation
 be populated with a List; and setter methods are available to indicate page size and page number. 
 The bean will do the rest. You set it in the controller, which then returns a ModelAndView object to 
 the client layer.
+
+Building a example using spring pagination
+TODO controllers and view. 
+Hopefully get it done soon!!
