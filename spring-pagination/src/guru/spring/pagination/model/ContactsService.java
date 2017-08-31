@@ -2,11 +2,14 @@ package guru.spring.pagination.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Service;
 /**
  * 
  * @author Srisarguru
  *
  */
+@Service
 public class ContactsService {
 
 	private Contact newContact(String id, String name, String phoneno){
